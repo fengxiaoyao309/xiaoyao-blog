@@ -29,9 +29,9 @@ export const metadata: Metadata = {
 export const INITIAL_WELCOME_TEXT = '业余'
 
 // * 配置评论系统的官方文档 https://giscus.app/zh-CN
-export const COMMENT_CARD_REPO = 'NeilYeTAT/yeyu-blog-comment'
+export const COMMENT_CARD_REPO = 'fengxiaoyao309/xiaoyao-blog-Comment'
 
-export const COMMENT_CARD_REPO_ID = 'R_kgDOOiAAJA'
+export const COMMENT_CARD_REPO_ID = 'R_kgDOOpOCeQ'
 
 // * --------------- 以下配置不建议修改 ---------------
 
