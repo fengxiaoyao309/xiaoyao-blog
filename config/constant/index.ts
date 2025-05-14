@@ -8,25 +8,25 @@ export const ADMIN_EMAILS = process.env.NEXT_PUBLIC_ADMIN_EMAILS?.split(',')
 
 // * 元数据，SEO，网页关键字。。。
 export const metadata: Metadata = {
-  title: `叶鱼 | 业余`,
-  description: '记录前端开发、技术文章与生活思考的博客站点',
+  title: `风逍遥 | 逍遥`,
+  description: '记录软件测试、技术文章与生活思考的博客站点',
   keywords: [
-    '前端开发',
+    '软件测试',
     '技术博客',
-    'React',
-    'Next.js',
-    'vue',
+    'UI自动化测试​',
+    'Selenium​​',
+    '接口测试',
     'javascript',
-    'typescript',
+    '性能测试​',
     '阅读',
-    '叶鱼',
+    '逍遥',
   ],
-  authors: [{ name: '叶鱼', url: 'https://useyeyu.cc' }],
-  creator: '叶鱼',
+  authors: [{ name: '逍遥', url: 'https://www.fengxiaoyao.xyz/' }],
+  creator: '逍遥',
 }
 
 // * 首页动画加载的文字，建议不要超过 5 个字，你也可以去修改样式~
-export const INITIAL_WELCOME_TEXT = '业余'
+export const INITIAL_WELCOME_TEXT = '风逍遥'
 
 // * 配置评论系统的官方文档 https://giscus.app/zh-CN
 export const COMMENT_CARD_REPO = 'fengxiaoyao309/xiaoyao-blog-Comment'

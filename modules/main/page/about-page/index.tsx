@@ -14,105 +14,123 @@ export default function AboutPage() {
         ease: 'easeOut',
       }}
     >
-      <MaxWidthWrapper className="md:text-lg text-center flex items-center justify-center flex-col gap-4 mt-4">
-        <p>嘿, 你好呀~👋🏻</p>
-        <h2>
-          你可以叫我,
-          {' '}
-          <span className="font-bold text-purple-400">叶鱼</span>
-          {' '}
-          ~
-        </h2>
-        <p>不是很想透露真名, 所以我有很多很多马甲~</p>
-        <p>Neil, 揶揄, 叶鱼, 炆炆...~</p>
-        <p>你可以随意称呼我~</p>
-        <p>但求求你不要盒我喵🥹~</p>
-        <p>
-          我这先给您磕一个~
-          {' '}
-          <small className="text-pink-400">orz</small>
-        </p>
+      <MaxWidthWrapper className="md:text-lg text-center flex items-center justify-center flex-col gap-6 mt-4">
+        {/* 个人简介 */}
+        <section className="w-full max-w-2xl flex flex-col gap-4">
+          <h2 className="text-2xl font-bold text-purple-400 mb-2">🌱 关于我</h2>
+          <p>
+            我是风逍遥，你也可以叫我逍遥，一个在数学与代码间寻找平衡的普通大学生。
+            <br />
+            🎓 2022年进入二本院校，专业名字很厉害叫「信息与计算科学」
+            <br />
+            ✨ 从以为要学做游戏，到被数学题难哭，再到发现测试的乐趣
+          </p>
+        </section>
 
         <HorizontalDividingLine fill="#006A71" />
 
-        <p>我是一个死宅~</p>
-        <p>不喜欢吵闹的地方, 不喜欢人多的地方...</p>
-        <p>平日在家就写写代码, 看看书~</p>
-        <p>如果出了有趣的新番和游戏, 也是会尝试一下滴~</p>
-        <p>但我一般只在夏天玩游戏, 夜深人静开空调玩游戏很有感觉不是嘛~</p>
-        <p>现在的我在为自由而努力着~</p>
-
-        <h2>接下来是我的走马灯~</h2>
+        {/* 我的故事 */}
+        <section className="w-full max-w-2xl flex flex-col gap-3">
+          <h2 className="text-xl font-semibold text-indigo-400 mb-2">📅 我的故事</h2>
+          <div className="text-left md:text-center">
+            <b>🏫 2018-2022 | 高中时光</b>
+            <br />
+            每天穿过县城的梧桐道 🚲
+            <br />
+            📖 课桌里藏着周杰伦歌词本，晚自习偷偷给MP3充电
+            <br />
+            🌙 有个总借我数学笔记的女生，后来她成了毕业册里的"回忆"
+          </div>
+          <div className="text-left md:text-center">
+            <b>📚 2022-2023 | 大学初体验</b>
+            <br />
+            ❗ 发现专业要学大量数学时的表情 →
+            {' '}
+            <span className="inline-block">🤯</span>
+            <br />
+            💻 第一次摸到编程课电脑，手抖着输出了「Hello World!」
+            <br />
+            ☕ 为应付数学作业，创下连喝三杯奶茶的熬夜记录
+          </div>
+          <div className="text-left md:text-center">
+            <b>💡 2023-2025 | 找到新方向</b>
+            <br />
+            🐛 自学开发总卡在半路：
+            <br />
+            「购物网站项目」→ 变成永远加载不完的空白页
+            <br />
+            「音乐播放器」→ 只能播3秒的《晴天》前奏
+            <br />
+            🎯 直到遇见软件测试，终于找到能完整做出来的事：
+            <br />
+            ✓ 给别人的记账软件找bug 🕵️
+            <br />
+            ✓ 学着用工具自动检查网页
+          </div>
+        </section>
 
         <HorizontalDividingLine fill="#107B80" />
 
-        <h3 className="text-indigo-400">2022年的暑假, 我高考考砸了...</h3>
-        <p>
-          看了
-          <q>强风吹拂</q>
-          , 一个暑假, 每天都在跑步~
-        </p>
-        <p>
-          第一次接触电脑, 下载
-          <q>steam游戏中心</q>
-          🥹
-        </p>
-        <p>
-          第一次编程,
-          {' '}
-          <code>print('Hello, World!')</code>
-        </p>
-        <p>
-          感谢那个教会我使用电脑和带我走向编程道路的僵尸~
-          <ArrowDownIcon className="m-auto text-purple-500 md:size-10 animate-bounce mt-2" />
-        </p>
-        <Link
-          href="https://space.bilibili.com/19658621"
-          target="_blank"
-          className="px-4 py-2 rounded-sm font-mono underline hover:text-pink-600 hover:cursor-pointer"
-        >
-          Frank
-        </Link>
-
-        <HorizontalDividingLine fill="#208D90" />
-
-        <h3 className="text-indigo-400">2023年的暑假, 开始学习Java</h3>
-        <p>玩了很多游戏~</p>
-        <p>地平线4, 只狼, 去月球, 寻找天堂, 恋爱绮谭~</p>
-        <p>妈的🤬, Java真难写, 转前端~</p>
-        <p>卧槽, win11🫵🏻怎么崩了!😡</p>
-        <p>购入 Macbook air m2😋</p>
+        {/* 生活碎片 */}
+        <section className="w-full max-w-2xl flex flex-col gap-3">
+          <h2 className="text-xl font-semibold text-emerald-500 mb-2">🎵 生活碎片</h2>
+          <div>
+            <b>🎧 音乐</b>
+            <br />
+            床头挂着周杰伦的海报
+            <br />
+            洗澡必唱林俊杰的《将故事写成我们》（邻居猫都听过）
+          </div>
+          <div>
+            <b>🎶 竹笛历险记</b>
+            <br />
+            花298元买的笛子，现在当书桌装饰品
+            <br />
+            唯一成果：能吹出《小星星》前两个音 🌟
+          </div>
+        </section>
 
         <HorizontalDividingLine fill="#30A09F" />
 
-        <h3 className="text-indigo-400">2024年的暑假, 开始学习React</h3>
-        <p>React 真有意思</p>
-        <p>React 真有意思</p>
-        <p>玩了 summer pockets😭, 一定要去一次圣地巡礼🥹</p>
-        <p>重看了一遍「青春猪头少年不会梦到兔女郎学姐」😋</p>
-        <p>人活着就是为了麻衣学姐😭</p>
-        <p>🐀🐀要开始学日语了😡!</p>
+        {/* 现在的我 */}
+        <section className="w-full max-w-2xl flex flex-col gap-3">
+          <h2 className="text-xl font-semibold text-pink-500 mb-2">🌞 现在的我</h2>
+          <div>
+            正在：
+            <br />
+            📝 准备人生第一份实习简历（改到第8版）
+            <br />
+            🧩 学用测试工具检查网站（像玩找不同游戏）
+            <br />
+            🎯 偷偷练习面试话术（对着镜子说"我超爱测试"）
+          </div>
+          <div>
+            迷茫时就去：
+            <br />
+            ☕ 校门口的「猫爪咖啡馆」，看店主养的橘猫打盹
+            <br />
+            📖 图书馆三楼窗边位，那里能听见操场打球的声音
+          </div>
+        </section>
 
         <HorizontalDividingLine fill="#48A6A7" />
 
-        <h3 className="text-indigo-400">当下</h3>
-        <p>准备暑期实习的项目和面试八股文...</p>
-        <p>闲暇之余看一些Web3相关的东西~</p>
-        <p>帮一个开源项目修改了几个拼写错误和几个简单的issue~</p>
-        <p>
-          收到了他们赠送的礼物~
-        </p>
-        <p>
-          感谢
-          <Link
-            href="https://openbuild.xyz/"
-            className="px-4 py-2 rounded-sm font-mono underline hover:text-emerald-400 hover:cursor-pointer"
-            target="_blank"
-          >
-            OpenBuild
-          </Link>
-        </p>
-        <p>这也算是我第一个合并的pr~</p>
+        {/* 想对你说 */}
+        <section className="w-full max-w-2xl flex flex-col gap-3">
+          <h2 className="text-xl font-semibold text-yellow-500 mb-2">💌 想对你说</h2>
+          <div>
+            如果你也：
+            <br />
+            🎧 听老歌时会想起某个人
+            <br />
+            ⌨️ 在代码世界里跌跌撞撞
+            <br />
+            🌱 正在寻找属于自己的小天地
+          </div>
+          <div>
+            欢迎留言聊聊你的故事~ 这里没有技术大神，只有普通人的成长日记
+          </div>
+        </section>
       </MaxWidthWrapper>
     </motion.div>
   )

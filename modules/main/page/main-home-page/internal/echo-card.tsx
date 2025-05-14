@@ -4,19 +4,26 @@ import type { Echo } from '@prisma/client'
 import { getRandomPublishedEcho } from '@/actions/echos'
 import { useEffect, useState } from 'react'
 
-let cachedEcho: Echo | null = null
-
 export default function EchoCard() {
-  const [echo, setEcho] = useState<Echo | null>(cachedEcho)
+  const [echo, setEcho] = useState<Echo | null>(null)
 
   useEffect(() => {
-    if (!cachedEcho) {
-      getRandomPublishedEcho().then((res) => {
-        if (res) {
-          cachedEcho = res
-          setEcho(res)
-        }
-      })
+    let isMounted = true
+
+    const fetchEcho = async () => {
+      const res = await getRandomPublishedEcho()
+      if (res && isMounted) {
+        setEcho(res)
+      }
+    }
+
+    fetchEcho() // 首次加载
+
+    const timer = setInterval(fetchEcho, 3000) // 每1秒自动切换
+
+    return () => {
+      isMounted = false
+      clearInterval(timer)
     }
   }, [])
 
@@ -34,7 +41,7 @@ export default function EchoCard() {
                     drop-shadow-[0_0_0.75rem_#211C84] dark:drop-shadow-[0_0_0.75rem_#91DDCF]"
       >
         「
-        {echo?.reference ?? '叶鱼'}
+        {echo?.reference ?? '逍遥'}
         」
       </footer>
     </section>

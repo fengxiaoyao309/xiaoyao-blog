@@ -1,6 +1,6 @@
 'use client'
 
-import avatar from '@/config/img/avatar.webp'
+import avatar from '@/config/img/xiaoyao.webp'
 import { useTransitionTheme } from '@/hooks/use-transition-theme'
 import { motion } from 'motion/react'
 import Image from 'next/image'
